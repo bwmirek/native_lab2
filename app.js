@@ -37,3 +37,5 @@ const extractInfo = () => {
 	console.log(`${user.name} ${user.surname} - ${grades / wages}`);
 }
 extractInfo();
+
+console.log(_.find(user.allGrades, subject => subject.weight === 1));

@@ -1,3 +1,7 @@
 const _ = require('lodash');
 
-console.log(_.mean([1, 2, 3]));
+const arr = [1, 2, 3];
+
+console.log(_.mean(arr));
+console.log(_.max(arr));
+console.log(_.min(arr));

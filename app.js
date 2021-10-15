@@ -39,3 +39,23 @@ const extractInfo = () => {
 extractInfo();
 
 console.log(_.find(user.allGrades, subject => subject.weight === 1));
+
+const collections = [
+	{},
+	15,
+	'hello@test.pl',
+	null,
+	['aaa', 'bbb', 5],
+	'admin@gmail.com',
+	undefined,
+	'a34@yahoo.com',
+	'321@a',
+	'321.pl'
+];
+
+const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+const getMail = (collection) => {
+	return _.filter(collection, item => typeof (item) === 'string' && re.test(item)).sort();
+}
+
+console.log(getMail(collections));
